@@ -5,18 +5,15 @@ import close from "../assets/icon-close.svg";
 import "./HeroImage.css";
 
 export default function HeroImage(props) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  function toggle() {
-    if (isOpen) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  }
   return (
     <>
       <div className="navbar_container">
-        <img src={isOpen ? close : ham} onClick={toggle} alt="ham" />
+        <img
+          src={props.isOpen ? close : ham}
+          onClick={props.toggle}
+          alt="ham"
+          className="hamimg"
+        />
         <div className="logo_container">
           <a href="#">
             <img src={logo} alt="logo" />
@@ -38,7 +35,7 @@ export default function HeroImage(props) {
             </li>
           </ul>
         </div>
-        {isOpen && (
+        {props.isOpen && (
           <div id="mobileNav">
             <div class="mobile_nav-content">
               <ul class="nav-list-mobile">

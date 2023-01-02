@@ -1,8 +1,7 @@
 import React from "react";
 import HeroContent from "./HeroContent.jsx";
 import HeroImage from "./HeroImage.jsx";
-import leftArrow from "../assets/icon-angle-left.svg";
-import rightArrow from "../assets/icon-angle-right.svg";
+import Buttons from "./Buttons.jsx";
 import data from "./data.js";
 import "./HeroContainer.css";
 
@@ -27,10 +26,26 @@ export default function HeroContainer() {
     }
   }
 
+  const [isOpen, setIsOpen] = React.useState(false);
+  function toggle() {
+    if (isOpen) {
+      setIsOpen(false);
+    } else {
+      setIsOpen(true);
+    }
+  }
+
   return (
     <div className="hero_section">
       <div className="hero_section-image">
-        <HeroImage imgSrc={data[index].img_src} />
+        <div className="hero_buttons">
+          <Buttons next={next} previous={previous} />
+        </div>
+        <HeroImage
+          toggle={toggle}
+          isOpen={isOpen}
+          imgSrc={data[index].img_src}
+        />
       </div>
       <div className="hero_section-content">
         <HeroContent
@@ -38,13 +53,8 @@ export default function HeroContainer() {
           title={data[index].title}
           text={data[index].text}
         />
-        <div className="button_container">
-          <button onClick={previous}>
-            <img src={leftArrow} alt="left" />
-          </button>
-          <button onClick={next}>
-            <img src={rightArrow} alt="right" />
-          </button>
+        <div className="content_buttons">
+          <Buttons next={next} previous={previous} />
         </div>
       </div>
     </div>
