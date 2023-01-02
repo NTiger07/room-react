@@ -33,6 +33,7 @@
 .hero_buttons button {
   background-color: #000;
   width: 50%;
+  height: 100%;
 }
 .hero_buttons button:hover {
   background-color: #444;
@@ -43,7 +44,7 @@
     display: none;
   }
   .hero_buttons {
-    display: flex;
+    display: block;
   }
   .hero_section {
     height: 100vh;
@@ -60,7 +61,6 @@
     padding: 0;
     margin: 0;
     width: 100px;
-    background-color: red;
     display: block;
     position: absolute;
     right: 0;
@@ -71,6 +71,9 @@
     display: none;
   }
 }
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 375px) {
   .hero_buttons {
     top: 286px;

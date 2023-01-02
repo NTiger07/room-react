@@ -35,6 +35,10 @@
   text-align: left;
   color: var(--Dark-Gray);
 }
+
+/* MEDIA QUERIES */
+
+
 @media screen and (max-width: 1024px) {
   .about_section-content p {
     font-size: 14px;

@@ -6,6 +6,7 @@ import data from "./data.js";
 import "./HeroContainer.css";
 
 export default function HeroContainer() {
+  // Navigation logic for hero section change
   const [index, setIndex] = React.useState(0);
 
   data.map((item) => {
@@ -26,6 +27,7 @@ export default function HeroContainer() {
     }
   }
 
+  //Toggle logic for Mobile navbar
   const [isOpen, setIsOpen] = React.useState(false);
   function toggle() {
     if (isOpen) {

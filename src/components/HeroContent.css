@@ -33,6 +33,9 @@
 .hero_content-container span:hover {
   color: #666;
 }
+
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 1024px) {
   .hero_content-container {
     padding: 40px;
