@@ -1,0 +1,44 @@
+.hero_section {
+  display: flex;
+  height: 65vh;
+}
+.hero_section-image {
+  width: 60%;
+  overflow: hidden;
+}
+.hero_section-content {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-between;
+}
+.button_container {
+  display: flex;
+  width: 25%;
+  height: 80px;
+}
+.button_container button {
+  background-color: #000;
+  width: 50%;
+}
+.button_container button:hover {
+  background-color: #444;
+}
+@media screen and (max-width: 425px) {
+  .hero_section {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .hero_section-image {
+    width: 100%;
+    height: 50%;
+  }
+  .hero_section-content {
+    width: 100%;
+  }
+  .button_container {
+    position: absolute;
+    right: 0;
+    top: 0.5;
+  }
+}

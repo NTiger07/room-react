@@ -1,0 +1,75 @@
+.hero_content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+.hero_content-container h1 {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.hero_content-container p {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-size: 17px;
+  text-align: left;
+  color: var(--Dark-Gray);
+  line-height: 3vh;
+  overflow: hidden;
+}
+.hero_content-container a {
+  color: black;
+  padding-top: 20px;
+  overflow: hidden;
+}
+.hero_content-container span {
+  letter-spacing: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero_content-container span:hover {
+  color: #666;
+}
+@media screen and (max-width: 1024px) {
+  .hero_content-container {
+    padding: 40px;
+  }
+  .hero_content-container h1 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+  .hero_content-container p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero_content-container {
+    padding: 20px;
+  }
+  .hero_content-container h1 {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero_content-container {
+    padding: 55px;
+  }
+  .hero_content-container h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero_content-container {
+    padding: 40px;
+  }
+  .hero_content-container h1 {
+    font-size: 1.8rem;
+  }
+  .hero_content-container p {
+    font-size: 15px;
+  }
+}
